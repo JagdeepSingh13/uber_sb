@@ -79,7 +79,12 @@ public class LocationService {
     }
 
     public void removeDriver(String driverId) {
+        log.info("removing driver: {}", driverId);
 
+        redisTemplate.opsForGeo().remove(
+                DRIVERS_GEO_KEY,
+                driverId
+        );
     }
 
 }
