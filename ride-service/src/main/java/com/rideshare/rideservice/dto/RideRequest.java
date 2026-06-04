@@ -12,10 +12,10 @@ public class RideRequest {
 
     private String riderId;
 
-    private double pickUpLatitude;
-    private double pickUpLongitude;
+    private double PickupLatitude;
+    private double PickupLongitude;
 
-    private String pickUpAddress;
+    private String PickupAddress;
 
     private double dropLatitude;
     private double dropLongitude;

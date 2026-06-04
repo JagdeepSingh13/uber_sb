@@ -4,11 +4,17 @@ import com.rideshare.rideservice.model.RideStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class RideResponse {
 
     private String id;
@@ -17,10 +23,10 @@ public class RideResponse {
 
     private String driverId;
 
-    private double pickUpLatitude;
-    private double pickUpLongitude;
+    private double PickupLatitude;
+    private double PickupLongitude;
 
-    private String pickUpAddress;
+    private String PickupAddress;
 
     private double dropLatitude;
     private double dropLongitude;
@@ -30,11 +36,12 @@ public class RideResponse {
     private RideStatus status;
 
     private double actualFare;
+    private double estimatedFare;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
     private LocalDateTime startedAt;
-    private LocalDateTime endedAt;
+    private LocalDateTime completedAt;
 
 }

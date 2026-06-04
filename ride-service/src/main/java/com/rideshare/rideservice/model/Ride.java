@@ -27,11 +27,11 @@ public class Ride {
     private String driverId;
 
     @Column(nullable = false)
-    private double pickUpLatitude;
+    private double PickupLatitude;
     @Column(nullable = false)
-    private double pickUpLongitude;
+    private double PickupLongitude;
 
-    private String pickUpAddress;
+    private String PickupAddress;
 
     private double dropLatitude;
     private double dropLongitude;
@@ -50,6 +50,6 @@ public class Ride {
     private LocalDateTime updatedAt;
 
     private LocalDateTime startedAt;
-    private LocalDateTime endedAt;
+    private LocalDateTime completedAt;
 
 }
